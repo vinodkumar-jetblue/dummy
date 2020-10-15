@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''\\jenkins\\build.cmd
+        sh '''.\\jenkins\\build.cmd
 '''
         echo 'building project'
       }
@@ -12,14 +12,14 @@ pipeline {
     stage('test') {
       steps {
         echo 'testing'
-        sh '\\jenkins\\test.cmd'
+        sh '.\\jenkins\\test.cmd'
       }
     }
 
     stage('deploy') {
       steps {
         echo 'deploying'
-        sh '\\jenkins\\deploy.cmd'
+        sh '.\\jenkins\\deploy.cmd'
       }
     }
 
