@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''.\\jenkins\\build.cmd
-'''
         echo 'building project'
+        bat 'jenkins\\build.cmd'
       }
     }
 
