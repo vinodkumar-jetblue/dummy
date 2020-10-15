@@ -11,14 +11,15 @@ pipeline {
     stage('test') {
       steps {
         echo 'testing'
-        sh '.\\jenkins\\test.cmd'
+        bat 'jenkins/test.cmd'
       }
     }
 
     stage('deploy') {
       steps {
         echo 'deploying'
-        sh '.\\jenkins\\deploy.cmd'
+        bat 'jenkins/deploy.cmd'
+        input 'Deploy ?'
       }
     }
 
