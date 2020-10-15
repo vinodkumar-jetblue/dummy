@@ -18,8 +18,9 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'deploying'
-        bat 'jenkins/deploy.cmd'
         input 'Deploy ?'
+        bat 'jenkins/deploy.cmd'
+        
       }
     }
 
